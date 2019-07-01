@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-nav',
@@ -7,13 +10,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+
 
   ngOnInit() {
   }
 
+  onRegister(){
+    // alert('Register');
+  }
+
   onHowToRegistar(){
     alert('sdfsfd');
+  }
+
+  modalRef: BsModalRef;
+  message: string;
+  constructor(private modalService: BsModalService, 
+    private router: Router) {}
+ 
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);
+  }
+ 
+  onOK(): void {
+    this.router.navigate(['formulaOnline']);
+    this.modalRef.hide();
+  }
+ 
+  onCancel(): void {
+    this.modalRef.hide();
   }
 
 }
