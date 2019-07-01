@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+// input.ng-invalid.ng-touched {
+//     border: 1px solid red;
+//   }
+.is-notValid {
+    color: red;
+}
+
+.is-invalid {
+  border: 1px solid red;
+}
+
+.button{
+  text-align: center;
+    border: 0.5px solid #d1dcdf;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-size: small;
+    font-family: arial, helvetica, sans-serif;
+    padding: 3px 10px 3px 10px;
+    text-decoration: none;
+    display: inline-block;
+    text-shadow: none !important;
+    box-shadow: 1px 1px 1px #79797E !important;
+    font-weight: bold;
+    color: black !important;
+    background-color: #e5e5e5;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#f7f7f7), to(#e5e5e5));
+    background-image: -webkit-linear-gradient(bottom, #f7f7f7, #e5e5e5);
+    background-image: -moz-linear-gradient(bottom, #f7f7f7, #e5e5e5);
+    background-image: -ms-linear-gradient(bottom, #f7f7f7, #e5e5e5);
+    background-image: -o-linear-gradient(bottom, #f7f7f7, #e5e5e5);
+    background-image: linear-gradient(to top, #f7f7f7, #e5e5e5)
+}
+
+row{
+  margin-top: 10px;
+}

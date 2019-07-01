@@ -1,0 +1,39 @@
+.loginDiv{
+    border: 0.5px solid #0000CD;
+    padding: 10px 20px;
+    background: #F8F8FF;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px #888888;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.permitLink{
+    text-decoration: underline;
+}
+
+.mainDiv{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+label {
+    font-weight: 600;
+}
+.lookingForPermits{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    font-size: small;
+    color: #000000;
+    font-weight: bold;
+}
+.permitLogo{
+    width: 80px;
+    height: 40px;
+}
