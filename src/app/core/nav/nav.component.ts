@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class NavComponent implements OnInit {
 
-
+  hrColorBlue: boolean;
 
   ngOnInit() {
   }
@@ -33,7 +33,9 @@ export class NavComponent implements OnInit {
   }
  
   onOK(): void {
+   
     this.router.navigate(['formulaOnline']);
+    this.hrColorBlue = false;
     this.modalRef.hide();
   }
  

@@ -10,6 +10,7 @@ import { NavComponent } from './core/nav/nav.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
+import { SubHeaderComponent } from './core/header/sub-header/sub-header.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RegisterComponent } from './register/register.component';
     FooterComponent,
     LoginComponent,
     NavComponent,
-    RegisterComponent
+    RegisterComponent,
+    SubHeaderComponent
   ],
   imports: [
     BrowserModule,

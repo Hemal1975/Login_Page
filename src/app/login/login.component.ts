@@ -19,6 +19,11 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     // this.loginFormData();
+    this.loginService.getLoginRespose().subscribe(
+      res => {
+        console.log(res);
+      }
+    );
   }
 
  
