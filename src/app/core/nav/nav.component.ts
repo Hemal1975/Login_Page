@@ -1,6 +1,7 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { Router } from '@angular/router';
+import { CoreService } from '../core.service';
 
 
 @Component({
@@ -11,7 +12,8 @@ import { Router } from '@angular/router';
 export class NavComponent implements OnInit {
 
   hrColorBlue: boolean;
-
+  onRegisterbarhide = true;
+ 
   ngOnInit() {
   }
 
@@ -26,15 +28,16 @@ export class NavComponent implements OnInit {
   modalRef: BsModalRef;
   message: string;
   constructor(private modalService: BsModalService, 
-    private router: Router) {}
+    private router: Router, private coreService: CoreService) {}
  
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template);
   }
  
   onOK(): void {
-   
-    this.router.navigate(['formulaOnline']);
+    this.router.navigate(['./register']);
+    this.onRegisterbarhide = false;
+    this.coreService.hrColorChange(this.onRegisterbarhide);
     this.hrColorBlue = false;
     this.modalRef.hide();
   }

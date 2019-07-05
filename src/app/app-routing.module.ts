@@ -5,7 +5,7 @@ import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
-  {path: 'formulaOnline', component: RegisterComponent},
+  {path: 'register', component: RegisterComponent},
   {path: '', redirectTo: 'login', pathMatch: 'full'}
 ];
 

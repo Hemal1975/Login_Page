@@ -11,6 +11,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { SubHeaderComponent } from './core/header/sub-header/sub-header.component';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { RegisterModule } from './register/register.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { SubHeaderComponent } from './core/header/sub-header/sub-header.componen
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    ModalModule.forRoot()
+    CommonModule,
+    RegisterModule,
+    ModalModule.forRoot(),
+    TooltipModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

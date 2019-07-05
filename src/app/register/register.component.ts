@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
+  RegistrationChoice: string;
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  forRegistration(selectedRegestration: string){
+    console.log(selectedRegestration);
+    this.RegistrationChoice = selectedRegestration;
+  }
+
+
 
 }

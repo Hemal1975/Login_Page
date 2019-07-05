@@ -1,0 +1,182 @@
+<div class="row mt-4">
+  <div class="col-12">
+    <fieldset class="scheduler-border">
+      <legend class="scheduler-border legendText">
+        Type of Application
+        <a href="#">
+          <img alt="Dosc to help" src="../../../assets/images/q.gif" />
+        </a>
+      </legend>
+      <div class="row">
+        <div class="col-md-4">
+          <input type="radio" 
+          name="newApplication" 
+          value="New Application"
+          (click)="onClickTypeOfApplication('newApplication')"
+          checked />
+          <label>New Application</label>
+        </div>
+        <div class="col-md-8">
+          You've never had an online account with TTB
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <input type="radio" 
+          name="newApplication" 
+          value="reactivateAccount" 
+          (click)="onClickTypeOfApplication('reactivateAccount')"
+          />
+          <label>Reactivate an Inactive Account</label>
+        </div>
+        <div class="col-md-8">
+          In the past, you had an online account with TTB that has been inactivated
+        </div>
+      </div>
+      <div *ngIf="inActiveUserIdDiv">
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border-subTitle">
+                Inactive User ID
+            </legend>
+            <div class="row">
+              <div class="col-12">
+                  If you remember the User ID of your inactive TTB Account, please enter it here.
+              </div>
+              </div>
+              <div class="row">
+              <div class="col-3">
+                <label for="existing inactive user">Existing (Inactive) User ID:</label>
+              </div>
+              <div class="col-2">
+                  <input type="text" name="existingUserID" class="form-control" />
+              </div>
+            </div>
+        </fieldset>
+      </div>
+    </fieldset>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <fieldset class="scheduler-border">
+      <legend class="scheduler-border legendText">
+        Personal Information
+        <a href="#">
+          <img alt="Dosc to help" src="../../../assets/images/q.gif" />
+        </a>
+      </legend>
+      <div class="row">
+        <div class="col-2">
+          <span class="requiredLabel">*</span>
+          <label for="first name">First Name</label>
+        </div>
+        <div class="col-md-3">
+          <input type="text" name="first name" class="form-control" />
+        </div>
+        <div class="col-0.75">
+          <label for="middle name">M.I.:</label>
+        </div>
+        <div class="col-1">
+          <input type="text" name="first name" class="form-control" />
+        </div>
+        <div class="col-*">
+          <span class="requiredLabel">*</span>
+          <label for="last name">Last Name</label>
+        </div>
+        <div class="col-md-2">
+          <input type="text" name="lastname" class="form-control" />
+        </div>
+        <div class="col-*">
+          <label for="suffix">Suffix:</label>
+        </div>
+        <div class="col-1">
+          <input type="text" name="suffix" class="form-control" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <span class="requiredLabel">*</span>
+          <label for="Employer name">Employer :</label>
+        </div>
+        <div class="col-md-3">
+          <input type="text" name="employeer name" class="form-control" />
+        </div>
+        <div class="col-0.75">
+          <label for="Employer name">Title :</label>
+        </div>
+        <div class="col-md-2">
+          <input type="text" name="title" class="form-control" />
+        </div>
+        <div class="col-1.5">
+          <label for="Employer name">Label Rep ID:</label>
+        </div>
+        <div class="col-md-2">
+          <input type="text" name="repId" class="form-control" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <span class="requiredLabel">*</span>
+          <label for="Employer name">Phone Number:</label>
+        </div>
+        <div class="col-md-3">
+          <input type="text" name="phone number" class="form-control" />
+        </div>
+        <div class="col-*">
+          <label for="Employer name">Fax Number:</label>
+        </div>
+        <div class="col-md-3">
+          <input type="text" name="fax no" class="form-control" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <label for="Employer name">Address Format:</label>
+        </div>
+        <div class="col-3">
+          <select class="form-control">
+            <option value="usps domestic" selected>USPS domestic</option>
+            <option value="foreign">Foreign</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <label for="street">Street:</label>
+        </div>
+        <div class="col-3">
+          <input type="text" name="street" class="form-control" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <label for="city">City:</label>
+        </div>
+        <div class="col-3">
+          <input type="text" name="city" class="form-control" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <label for="Employer name">State :</label>
+        </div>
+        <div class="col-2">
+          <select class="form-control w-50">
+            <option *ngFor="let state of states">{{state}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <label for="zipCode">Zip Code:</label>
+        </div>
+        <div class="col-2">
+          <input type="text" name="zipCode" class="form-control" />
+        </div> -
+        <div class="col-2">
+          <input type="text" name="zipCode" class="form-control w-75" />
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</div>

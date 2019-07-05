@@ -1,3 +1,35 @@
-<p>
-  register works!
-</p>
+<div class="container-fluid">
+  <div>
+    <h4>User Registration</h4>
+  </div>
+
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" (click)="forRegistration('main')">Main</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="forRegistration('company')">Company</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="forRegistration('comments')">Comments</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="forRegistration('dosc')">Dosc/Links</a>
+    </li>
+  </ul>
+<div  [ngSwitch]="RegistrationChoice">
+<div *ngSwitchCase="'company'">
+  <app-company></app-company>
+</div>
+<div *ngSwitchCase="'comments'">
+  <app-comments></app-comments>
+</div>
+<div *ngSwitchCase="'docs'">
+    <app-docs></app-docs>
+  </div>
+<div *ngSwitchCase="'main'">
+    <app-main-registration></app-main-registration>
+  </div>
+</div>
+</div>
+
