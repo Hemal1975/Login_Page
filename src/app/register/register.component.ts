@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class RegisterComponent implements OnInit {
 
   RegistrationChoice: string;
+  
 
   constructor() { }
 
@@ -18,6 +20,7 @@ export class RegisterComponent implements OnInit {
     console.log(selectedRegestration);
     this.RegistrationChoice = selectedRegestration;
   }
+
 
 
 

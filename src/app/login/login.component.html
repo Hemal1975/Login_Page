@@ -1,11 +1,15 @@
 <div class="container">
     <div class="row text-center">
       <div class="col-12">
-        <h6>Already registered? Log in:</h6>
+        <h6 *ngIf="loginRedirectTo">Already registered? Log in:</h6>
+        <h6 *ngIf="loginRedirectTo == false">Welcome Hemal</h6>
       </div>
     </div>
     <div class="card loginDiv">
-      <div class="card-body">
+      <div class="card-body" *ngIf="loginRedirectTo">
+          <div class="alert alert-danger" role="alert" *ngIf="isSubmitted == true">
+              Invalid username/password; Please enter the correct credentials to login 
+            </div>
         <form #loginForm="ngForm">
           <div class="row">
               <div class="col-3">
@@ -17,10 +21,10 @@
                 name="userName"
                 required 
                 #userName="ngModel"
-                [class.is-invalid]="isSubmitted && userName.invalid"
+                
                 class="form-control"/>
-                <span class="is-notValid" 
-                *ngIf="userName.invalid && isSubmitted">Username is required</span>
+                <!-- <span class="is-notValid" 
+                *ngIf="userName.invalid && isSubmitted">Username is invalid</span> -->
               </div>
               <!-- <div class="col-3 text-left">
                 <a alt="expired password" href="#">
@@ -36,11 +40,11 @@
                   name="password"
                   required
                   (ngModel)="password"
-                  [class.is-invalid]="isSubmitted && password.invalid"
+                 
                   #password="ngModel"
                   class="form-control"/>
-                  <span class="is-notValid" 
-                  *ngIf="password.invalid && isSubmitted">Password is required</span>
+                  <!-- <span class="is-notValid" 
+                  *ngIf="password.invalid && isSubmitted">Password is invalid</span> -->
                 </div>
                 <!-- <div class="col-3 text-left">
                   <a alt="expired password" href="#" class=""><u>
@@ -51,7 +55,7 @@
               <div class="col-3">
                 <!-- <label>logon to:</label> -->
               </div>
-              <div class="col-9">
+              <!-- <div class="col-9">
                   <button type="button"
                   (click)="onPONL()" 
                   class="button btn-sm">
@@ -64,19 +68,24 @@
                   (click)="onCOLA()" 
                   class="button btn-sm ml-1">
                   COLAs Online</button>
-              </div>
-              <!-- <div class="col-9">
+              </div> -->
+              <div class="col-9">
                   <button type="button"
-                  (click)="onPONL()" 
+                  (click)="onLogin()" 
                   class="button btn-sm">
                   Login</button>
-                  <button type="button"
-                  (click)="onFONL()" 
+                  <!-- <button type="button"
+                  (click)="onCancel()" 
                   class="button btn-sm ml-1">
-                  Cancel</button>
-              </div> -->
+                  Cancel</button> -->
+              </div>
             </div>        
           </form>   
+      </div>
+      <div class="text-center" *ngIf="loginRedirectTo == false">
+        <div><a href="#"><h2>Welcome to PONL Online...</h2></a></div>
+        <div><a href="#"><h2>Welcome to FONL Online...</h2></a></div>
+        <div><a href="#"><h2>Welcome to COLA Online...</h2></a></div>
       </div>
     </div>
     <!-- <div class="lookingForPermits text-center">

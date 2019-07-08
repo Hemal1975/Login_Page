@@ -14,6 +14,7 @@ import { SubHeaderComponent } from './core/header/sub-header/sub-header.componen
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { RegisterModule } from './register/register.module';
 import { CommonModule } from '@angular/common';
+import { BnNgIdleService } from 'bn-ng-idle'; // import bn-ng-idle service
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { CommonModule } from '@angular/common';
     ModalModule.forRoot(),
     TooltipModule.forRoot()
   ],
-  providers: [],
+  providers: [BnNgIdleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

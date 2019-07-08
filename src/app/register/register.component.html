@@ -1,20 +1,35 @@
 <div class="container-fluid">
   <div>
-    <h4>User Registration</h4>
+    <h4>User Registration
+        <a href="#">
+            <img alt="Dosc to help" src="../../../assets/images/q.gif" />
+          </a>
+    </h4>
   </div>
 
 <ul class="nav nav-tabs">
     <li class="nav-item">
-      <a class="nav-link" (click)="forRegistration('main')">Main</a>
+      <button class="nav-link" 
+      (click)="forRegistration('main')"
+      autofocus
+      >
+      Main</button>
     </li>
     <li class="nav-item">
-      <a class="nav-link" (click)="forRegistration('company')">Company</a>
+      <button class="nav-link" 
+      (click)="forRegistration('company')"
+      >
+      Company</button>
     </li>
     <li class="nav-item">
-      <a class="nav-link" (click)="forRegistration('comments')">Comments</a>
+      <button class="nav-link" 
+      (click)="forRegistration('comments')">
+      Comments</button>
     </li>
     <li class="nav-item">
-      <a class="nav-link" (click)="forRegistration('dosc')">Dosc/Links</a>
+      <button class="nav-link" 
+      (click)="forRegistration('docs')">
+      Docs/Links</button>
     </li>
   </ul>
 <div  [ngSwitch]="RegistrationChoice">
@@ -25,9 +40,10 @@
   <app-comments></app-comments>
 </div>
 <div *ngSwitchCase="'docs'">
+  <h3>This is Docs</h3>
     <app-docs></app-docs>
   </div>
-<div *ngSwitchCase="'main'">
+  <div *ngSwitchDefault>
     <app-main-registration></app-main-registration>
   </div>
 </div>

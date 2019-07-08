@@ -1,3 +1,33 @@
 .nav-link {
-    background-color: brown;
+    background-color: #fff;
+    color: #004276;
+    font-weight: 700;
+    cursor: pointer;
 }
+.nav-tabs {
+    background-color: #993333;
+}
+.nav-item {
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 1px;
+    color: #004276;
+    font-weight: 700;
+    cursor: pointer; 
+}
+li button:focus{
+    background-color: #004276;
+    color: #fff;
+}
+
+.active{
+    background: #004276;
+    color: white;
+}
+
+.activeClass {
+    background: #004276;
+    color: white;
+}
+
