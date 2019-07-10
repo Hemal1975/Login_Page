@@ -15,7 +15,11 @@
     color: #004276;
     font-weight: 700;
     cursor: pointer; 
+    button {
+        border-radius: 10px 10px 0 0;
+    }
 }
+
 li button:focus{
     background-color: #004276;
     color: #fff;

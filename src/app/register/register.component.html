@@ -2,33 +2,39 @@
   <div>
     <h4>User Registration
         <a href="#">
-            <img alt="Dosc to help" src="../../../assets/images/q.gif" />
+            <!-- <img alt="Dosc to help" src="../../../assets/images/q.gif" /> -->
+            <img alt="Dosc to help" src="https://www.ttbonline.gov/formulasonline/images/q.gif" />
           </a>
     </h4>
   </div>
 
 <ul class="nav nav-tabs">
-    <li class="nav-item">
+    <li class="nav-item ">
       <button class="nav-link" 
       (click)="forRegistration('main')"
-      autofocus
+      [ngClass]="{'activeClass': RegistrationChoice == 'main'}"
       >
       Main</button>
     </li>
     <li class="nav-item">
       <button class="nav-link" 
       (click)="forRegistration('company')"
+      [ngClass]="{'activeClass': RegistrationChoice == 'company'}"
       >
       Company</button>
     </li>
     <li class="nav-item">
       <button class="nav-link" 
-      (click)="forRegistration('comments')">
+      (click)="forRegistration('comments')"
+      [ngClass]="{'activeClass': RegistrationChoice == 'comments'}"
+      >
       Comments</button>
     </li>
     <li class="nav-item">
       <button class="nav-link" 
-      (click)="forRegistration('docs')">
+      (click)="forRegistration('docs')"
+      [ngClass]="{'activeClass': RegistrationChoice == 'docs'}"
+      >
       Docs/Links</button>
     </li>
   </ul>

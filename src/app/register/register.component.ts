@@ -8,7 +8,7 @@ import { ActivationEnd } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
-  RegistrationChoice: string;
+  RegistrationChoice: string = 'main';
   
 
   constructor() { }

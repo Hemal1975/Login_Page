@@ -9,7 +9,7 @@ import { CompanyComponent } from './company/company.component';
 import { CommentsComponent } from './comments/comments.component';
 import { DocsComponent } from './dosc/docs.component.ts';
 import { CommonModule } from '@angular/common';
-
+import {NgxPrintModule} from 'ngx-print';
 
 @NgModule({
   declarations: [
@@ -20,6 +20,7 @@ import { CommonModule } from '@angular/common';
   ],
   imports: [
     RegisterRoutingModule,
+    NgxPrintModule,
     CommonModule,
     ModalModule.forRoot(),
     TooltipModule.forRoot()

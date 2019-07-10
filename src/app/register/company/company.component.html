@@ -1,1 +1,20 @@
 <h2>Company</h2>
+
+<label>Upload Files</label><br>
+<input type="file" (change)="onFileSelected($event)" /><br><br>
+<button class="btn btn-primary" (click)="onUpload()">Upload</button><br><br>
+<div id="print-section">
+    <h1 style="background-color: aqua">TTBOnline</h1>
+    <h2>LoginPage</h2>
+    chunk vendor vendor.js, vendor.js.map (vendor) 4.42 MB [initial] [rendered]
+chunk vendor vendor.js, vendor.js.map (vendor) 4.42 MB [initial] [rendered]
+** Angular Live Development Server is listening on localhost:4200, open your browser on http
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+ ｢wdm｣: Compiled successfully.
+ ｢wdm｣: Compiling...
+</div>
+<button 
+[useExistingCss]="true"
+printSectionId="print-section" 
+ngxPrint>
+Print</button>
