@@ -1,12 +1,12 @@
-<div class="row mainNavbar" *ngIf="onRegisterbarhide">  
-  <div class="col" data-toggle="modal" data-target="#exampleModal" (click)="openModal(template)">
-    REGISTER
+<div class="row mainNavbar">
+  <div class="col">
+    REGISTAR
   </div>
   <div class="col" (click)="onHowToRegistar()">
-    HOW TO REGISTER
+    HOW TO REGISTAR
   </div>
   <div class="col">
-    PUBLIC COLA REGISTRY
+    PUBLIC COLA REGISTARY
   </div>
   <div class="col">
     FAQ
@@ -14,25 +14,4 @@
   <div class="col">
     CONTACT US
   </div>
-
-<br><br>
 </div>
-<!-- Modal Start -->
-<ng-template #template>
-    <div class="modal-header">
-        <div>ttbonline.gov says</div>
-    </div>
-  <div class="modal-body">
-    <p>If you are already a COLAs Online or Formulas Online user, 
-      and wish to use the other system, you do not need to re-register. Instead, 
-      click 'Cancle', log in, and select 'My Account/Companies/Add' to apply. 
-    </p>
-    <p>If you have neither a COLAs Online nor a Formulas Online account and wish to register, click 'OK'.</p>
-    <div class="float-right">
-        <button type="button" class="btn btn-primary mr-1" (click)="onOK()">OK</button>
-        <button type="button" class="btn btn-outline-secondary buttonColor" 
-        (click)="onCancel()">Cancel</button>
-    </div>
-  </div>
-</ng-template>
-<!-- Modal End -->

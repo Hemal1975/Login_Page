@@ -1,15 +1,11 @@
-<div class="container">
+<div class="">
     <div class="row text-center">
       <div class="col-12">
-        <h6 *ngIf="loginRedirectTo">Already registered? Log in:</h6>
-        <h6 *ngIf="loginRedirectTo == false">Welcome Hemal</h6>
+        <h6>Already registered? Log in:</h6>
       </div>
     </div>
     <div class="card loginDiv">
-      <div class="card-body" *ngIf="loginRedirectTo">
-          <div class="alert alert-danger" role="alert" *ngIf="isSubmitted == true">
-              Invalid username/password; Please enter the correct credentials to login 
-            </div>
+      <div class="card-body">
         <form #loginForm="ngForm">
           <div class="row">
               <div class="col-3">
@@ -21,10 +17,10 @@
                 name="userName"
                 required 
                 #userName="ngModel"
-                
+                [class.is-invalid]="isSubmitted && userName.invalid"
                 class="form-control"/>
-                <!-- <span class="is-notValid" 
-                *ngIf="userName.invalid && isSubmitted">Username is invalid</span> -->
+                <span class="is-notValid" 
+                *ngIf="userName.invalid && isSubmitted">Username is required</span>
               </div>
               <!-- <div class="col-3 text-left">
                 <a alt="expired password" href="#">
@@ -40,11 +36,11 @@
                   name="password"
                   required
                   (ngModel)="password"
-                 
+                  [class.is-invalid]="isSubmitted && password.invalid"
                   #password="ngModel"
                   class="form-control"/>
-                  <!-- <span class="is-notValid" 
-                  *ngIf="password.invalid && isSubmitted">Password is invalid</span> -->
+                  <span class="is-notValid" 
+                  *ngIf="password.invalid && isSubmitted">Password is required</span>
                 </div>
                 <!-- <div class="col-3 text-left">
                   <a alt="expired password" href="#" class=""><u>
@@ -53,39 +49,24 @@
               </div>
             <div class="row mt-4">
               <div class="col-3">
-                <!-- <label>logon to:</label> -->
+                <label>logon to:</label>
               </div>
-              <!-- <div class="col-9">
-                  <button type="button"
-                  (click)="onPONL()" 
-                  class="button btn-sm">
-                  PONL Online</button>
-                  <button type="button"
-                  (click)="onFONL()" 
-                  class="button btn-sm ml-1">
-                  FONL Online</button>
-                  <button type="button"
-                  (click)="onCOLA()" 
-                  class="button btn-sm ml-1">
-                  COLAs Online</button>
-              </div> -->
               <div class="col-9">
                   <button type="button"
-                  (click)="onLogin()" 
+                  (click)="onPostData()" 
                   class="button btn-sm">
-                  Login</button>
-                  <!-- <button type="button"
-                  (click)="onCancel()" 
+                  POST DATA</button>
+                  <button type="button"
+                  (click)="onGetData()" 
                   class="button btn-sm ml-1">
-                  Cancel</button> -->
+                  Get Data</button>
+                  <!-- <button type="button"
+                  (click)="onCOLA()" 
+                  class="button btn-sm ml-1">
+                  COLAs Online</button> -->
               </div>
             </div>        
           </form>   
-      </div>
-      <div class="text-center" *ngIf="loginRedirectTo == false">
-        <div><a href="#"><h2>Welcome to PONL Online...</h2></a></div>
-        <div><a href="#"><h2>Welcome to FONL Online...</h2></a></div>
-        <div><a href="#"><h2>Welcome to COLA Online...</h2></a></div>
       </div>
     </div>
     <!-- <div class="lookingForPermits text-center">
@@ -109,6 +90,3 @@
  
     <!-- Modal End -->
   </div>
-  <div class="container-fluid mt-4">
-      <app-footer></app-footer>
-    </div>

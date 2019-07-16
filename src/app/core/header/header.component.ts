@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CoreService } from '../core.service';
 
 @Component({
   selector: 'app-header',
@@ -8,16 +7,9 @@ import { CoreService } from '../core.service';
 })
 export class HeaderComponent implements OnInit {
 
-  hrColorBlue : boolean;
+  constructor() { }
 
-  constructor(private coreService: CoreService) {
-    
-   }
-
-  
   ngOnInit() {
-   
-   
   }
 
 }
